@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.silva.pixmanager";
+option java_outer_classname = "PixManagerKotlin";
+option objc_class_prefix = "HLW";
+
+package com.silva.pixmanager;
+
+service PixManagerKotlinService {
+  rpc send (PixManagerKotlinRequest) returns (PixManagerKotlinReply) {}
+}
+
+message PixManagerKotlinRequest {
+  string name = 1;
+}
+
+message PixManagerKotlinReply {
+  string message = 1;
+}
